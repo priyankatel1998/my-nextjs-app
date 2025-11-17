@@ -7,7 +7,7 @@ export default function Navbar (){
         <h2 className="font-semibold text-xl">My Excercise</h2>
             <div className="space-x-4">
                 <Link href="/" className="hover:text-blue-600">Home</Link>
-               <Link href="/about" className="hover:text-blue-600">About</Link>
+               <Link href="/about" className="hover:text-blue-600">about</Link>
             </div>
     </div>
 </nav>
