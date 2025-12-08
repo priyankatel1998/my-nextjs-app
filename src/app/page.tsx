@@ -1,19 +1,29 @@
-import InfoCard from "@/components/InfoCard";
+//import Nykaa from "@/components/Nykaa";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import PersistCounter from "@/components/PersistCounter";
+import Link from "next/link";
+import Counter from "@/components/Counter";
 
-
-export default function Home() {
-  return (
+export default function Home (){
+  return(
+    <nav>
     <div className="space-y-6">
-     <h1 className="text-3xl font-bold">This is priyanka . I am commiting my third commit  I write firty commit in gitbash </h1>
-     <InfoCard 
-     title="Nest.js + TypeScript"
-     description="A small demo UI build with modern tools "
-     />
-     <InfoCard 
-     title="Tailwind CSS"
-     description="beautiful utility-first styling with zero efferd"
-     />
+      <Breadcrumbs />
+     <h1 className="text-3xl font-bold">shopping platform </h1>
+      {/* </div><Nykaa id={1} name="Nykaa" /> <Nykaa id={2} name="Meesho" /> */}
+       <div className="space-x-4">
+               <Link href="/nykaa" className="hover:text-blue-600">Nykaa</Link>
+               <Link href="/meesho" className="hover:text-blue-600">Meesho</Link>
+       </div>
 
-    </div>
+       <main style={{ padding: 40 }}>
+      <h1>Zustand Persist Store Example</h1>
+      <PersistCounter />
+      <Counter />
+      </main>
+  </div>
+</nav>
+
+
   );
 }
